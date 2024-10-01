@@ -5,24 +5,30 @@ on: [push]
 jobs:
   job1:
     runs-on: self-hosted
+    container:
+      image: ubuntu:latest  # You can use any Docker image here
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run Job 1
-        run: echo "Running Job 1"
+        run: echo "Running Job 1 inside container"
 
   job2:
     runs-on: self-hosted
+    container:
+      image: ubuntu:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run Job 2
-        run: echo "Running Job 2"
+        run: echo "Running Job 2 inside container"
 
   job3:
     runs-on: self-hosted
+    container:
+      image: ubuntu:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Run Job 3
-        run: echo "Running Job 3"
+        run: echo "Running Job 3 inside container"
