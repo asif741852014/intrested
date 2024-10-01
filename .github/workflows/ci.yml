@@ -5,8 +5,6 @@ on: [push]
 jobs:
   job1:
     runs-on: self-hosted
-    container:
-      image: github-actions-runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,8 +13,6 @@ jobs:
 
   job2:
     runs-on: self-hosted
-    container:
-      image: github-actions-runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -25,8 +21,6 @@ jobs:
 
   job3:
     runs-on: self-hosted
-    container:
-      image: github-actions-runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
