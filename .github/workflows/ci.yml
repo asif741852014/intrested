@@ -15,7 +15,7 @@ jobs:
       - name: check
         run: docker images
       - name: aa
-        run: docker run -e name podappa --name defend abcdefg:1.0
+        run: docker run -e name=podappa --name defend abcdefg:1.0
       - name: ps
         run: docker ps
 
