@@ -10,6 +10,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Job 1
         run: echo "Running Job 1 inside container"
+      - name: abc
+        run: docker build -t abcdefg:1.0 .
+      - name: check
+        run: docker images
 
   job2:
     runs-on: self-hosted
