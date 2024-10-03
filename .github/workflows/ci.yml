@@ -11,9 +11,13 @@ jobs:
       - name: Run Job 1
         run: echo "Running Job 1 inside container"
       - name: abc
-        run: docker build --build-arg name=pooora -t abcdefg:1.0 .
+        run: docker build -t abcdefg:1.0 .
       - name: check
         run: docker images
+      - name: aa
+        run: docker run -e name podappa --name defend abcdefg:1.0
+      - name: ps
+        run: docker ps
 
   job2:
     runs-on: self-hosted
